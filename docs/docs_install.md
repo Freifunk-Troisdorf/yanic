@@ -5,14 +5,13 @@
 ### Install
 ```sh
 cd /usr/local/
-wget https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz -O go-release-linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz -O go-release-linux-amd64.tar.gz
 tar xvf go-release-linux-amd64.tar.gz
 rm go-release-linux-amd64.tar.gz
 ```
 
 ### Configure go
 Add these lines in your root shell startup file (e.g. `/root/.bashrc`):
-
 ```sh
 export GOPATH=/opt/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
@@ -34,14 +33,12 @@ systemctl daemon-reload
 ```
 
 Before start, you should configure yanic by the file `/etc/yanic.conf`:
-
-```
+```sh
 systemctl start yanic
 ```
 
 Enable to start on boot:
-
-```
+```sh
 systemctl enable yanic
 ```
 
