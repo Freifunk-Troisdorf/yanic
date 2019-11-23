@@ -110,7 +110,7 @@ ifname              = "br-ffhb"
 {% method %}
 ip address is the own address which is used for sending.
 If not set or set with empty string it will take an address of ifname.
-(It preferes the link local address, so at babel mesh-network it should be configurated)
+(It prefers the link local address, so at babel mesh-network it should be configurated)
 {% sample lang="toml" %}
 ```toml
 ip_address          = "fe80::..."
@@ -518,6 +518,21 @@ The path, where to store nodelist.json
 {% sample lang="toml" %}
 ```toml
 path     = "/var/www/html/meshviewer/data/nodelist.json"
+```
+{% endmethod %}
+
+## [[nodes.output.raw]]
+{% method %}
+This output takes the respondd response as sent by the node and includes it in a JSON document.
+{% endmethod %}
+
+
+### path
+{% method %}
+The path, where to store raw.json
+{% sample lang="toml" %}
+```toml
+path     = "/var/www/html/meshviewer/data/raw.json"
 ```
 {% endmethod %}
 
